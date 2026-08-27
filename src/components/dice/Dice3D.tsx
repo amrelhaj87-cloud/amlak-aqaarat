@@ -18,8 +18,8 @@ export const Dice3D: React.FC<Dice3DProps> = ({
 }) => {
   const [animating, setAnimating] = useState(false);
   const [displayValues, setDisplayValues] = useState<[number, number]>(dice);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (isRolling) {

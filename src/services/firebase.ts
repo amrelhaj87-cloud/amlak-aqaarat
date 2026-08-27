@@ -27,9 +27,11 @@ import { UserProfile, FirebaseConfigOptions } from '../types/auth';
 import { Room } from '../types/room';
 import { GameState } from '../types/game';
 
+
+
 // Real Firebase configuration provided by the user
 const DEFAULT_FIREBASE_CONFIG: FirebaseConfigOptions = {
-  apiKey: "AIzaSyCtHR_1TLm32nyIc413i47B3SAx2ibhxSI",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "monopoly-arabic-db839.firebaseapp.com",
   projectId: "monopoly-arabic-db839",
   storageBucket: "monopoly-arabic-db839.firebasestorage.app",

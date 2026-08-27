@@ -62,8 +62,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [selectedTileDetail, setSelectedTileDetail] = useState<TileData | null>(null);
   const [isMovingPawn, setIsMovingPawn] = useState<boolean>(false);
 
-  const botActionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const turnTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const botActionTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const turnTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Subscribe to Room updates
   useEffect(() => {
